@@ -3,14 +3,10 @@
 Description: *Show the user the current weather in their location.*
 
 0. Research and experimentation with the US National Weather Service API.
-                                         👇 latitude
-    - GET https://api.weather.gov/points/39.7456,-97.0892
-                                                👆 longitude
-        - data.properties.forecastHourly
-            - URL for fetching the hourly forecast 👇
+    - GET https://api.weather.gov/points/LATITUDE_HERE,LONGITUDE_HERE
+        - `data.properties.forecastHourly` (👇 URL for fetching the hourly forecast 👇)
     - GET https://api.weather.gov/gridpoints/TOP/31,80/forecast/hourly
-        - data.properties.periods[0]
-            - Forecast for the current hour
+        - `data.properties.periods[0]` (Forecast for the *current* hour)
 
 1. I need to find the user's current geographical location.
     - GPS/Geolocation API to get the **latitude** and **longitude** coordinates.
